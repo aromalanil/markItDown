@@ -1,74 +1,127 @@
 //Custom Fonts
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 //Variable Decelerations
-$primary-color:#339989;
-$primary-accent:#7DE2D1;
-$primary-text:#131515;
-$text-accent:#2B2C28;
-$white:#FFFAFB;
-$source-code-font:'Open Sans', sans-serif;
-$open-sans-font:'Source Code Pro', monospace;
+$primary-color: #339989;
+$primary-accent: #7de2d1;
+$primary-text: #131515;
+$text-accent: #2b2c28;
+$white: #fffafb;
+$source-code-font: "Open Sans", sans-serif;
+$open-sans-font: "Source Code Pro", monospace;
 
 // General Styling
-*{
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: $primary-text;
+  font-family: $source-code-font;
+}
+
+.navbar {
+  margin: 0;
+  background-color: $primary-color;
+  color: $white;
+  padding: 1rem 5vw;
+}
+
+.work-area {
+  width: 100vw;
+  height: calc(100vh - 60px);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper-card {
+  width: 95%;
+  height: 90%;
+  display: flex;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24);
+}
+.markdown-edit,
+.markdown-preview {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 1rem;
+  height: 2.5rem;
+  width: 100%;
+  background-color: green;
+  text-transform: uppercase;
+  h3 {
+    font-weight: 600;
     margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  }
 }
 
-body{
-    color:$primary-text;
+.markdown-edit {
+  background-color: blue;
+  width: 100%;
+  textarea {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 2rem;
     font-family: $source-code-font;
+    width: 100%;
+    resize: none;
+    height: 100%;
+  }
 }
 
-.navbar{
-    background-color: $primary-color;
-    color:$white;
-    padding: 1rem 5vw;
+.markdown-preview {
+  background-color: red;
+  width: 100%;
+  .html-div {
+    margin-top: 2rem;
+    overflow-y: scroll;
+  }
 }
 
-.work-area{
-    width: 100vw;
-    height: calc(100vh - 60px);
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.gutter {
+  height: 100% !important;
+  width: 10px !important;
+  cursor: col-resize;
+  background-color: #444857;
 }
 
-.wrapper-card{
-    width: 95%;
-    height: 90%;
-    display: flex;
-    box-shadow: 0 4px 12px rgba(0,0,0,.24);
-}
-.markdown-edit,.markdown-preview{
+@media screen and (max-width: 600px) {
+  .wrapper-card {
+    flex-direction: column;
+  }
+  .markdown-edit,
+  .markdown-preview {
+    width: 100% !important;
     padding: 1rem;
     display: flex;
     flex-direction: column;
-    flex: 2rem 1fr;
+    position: relative;
+  }
+  .gutter {
+    height: 10px !important;
+    width: 100% !important;
+    cursor: row-resize;
+  }
 }
 
-.section-title{
-    text-transform: uppercase;
-}
-
-.markdown-edit{
-    width: 100%;
-    textarea{
-        font-family: $source-code-font;
-        width: 100%;
-        resize: none;
-        height: 100%;
-    }
-}
-
-.markdown-preview{
-    width: 100%;
-    .html-div{
-        overflow-y: scroll;
-    }
+@media screen and (min-width: 600px) {
+  .markdown-edit,
+  .markdown-preview {
+    height: 100% !important;
+  }
 }

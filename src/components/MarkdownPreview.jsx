@@ -10,8 +10,14 @@ function MarkdownPreview({ content }) {
 
   return (
     <div className="markdown-preview">
-      <h3 className="section-title">Preview</h3>
-      <div className="html-div" dangerouslySetInnerHTML={{ __html: html}}></div>
+      <div className="section-title">
+        <h3>Preview</h3>
+      </div>
+      <div
+        id="preview"
+        className="html-div"
+        dangerouslySetInnerHTML={{ __html: html }}
+      ></div>
     </div>
   );
 }
