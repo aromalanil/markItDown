@@ -22,11 +22,20 @@ body {
   font-family: $source-code-font;
 }
 
+//Custom Scrollbar
+/* width */
+::-webkit-scrollbar {
+  width: 0%;
+}
+
 .navbar {
   margin: 0;
   background-color: $primary-color;
   color: $white;
   padding: 1rem 5vw;
+  .title {
+    margin: 0;
+  }
 }
 
 .work-area {
@@ -46,7 +55,7 @@ body {
 }
 .markdown-edit,
 .markdown-preview {
-  padding: 1rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -58,8 +67,8 @@ body {
   left: 0;
   display: flex;
   align-items: center;
-  justify-content: center;
-  padding-left: 1rem;
+  justify-content: space-between;
+  padding:0 1rem;
   height: 2.5rem;
   width: 100%;
   background-color: green;
@@ -71,9 +80,9 @@ body {
 }
 
 .markdown-edit {
-  background-color: blue;
   width: 100%;
   textarea {
+    background-color: $white;
     font-size: 1rem;
     font-weight: 400;
     margin-top: 2rem;
@@ -85,9 +94,9 @@ body {
 }
 
 .markdown-preview {
-  background-color: red;
   width: 100%;
   .html-div {
+    background-color: $white;
     margin-top: 2rem;
     overflow-y: scroll;
   }
@@ -102,6 +111,8 @@ body {
 
 @media screen and (max-width: 600px) {
   .wrapper-card {
+    width: 100%;
+    height: 100%;
     flex-direction: column;
   }
   .markdown-edit,

@@ -7,9 +7,12 @@ function MarkdownEdit({ content, changeContent }) {
   };
 
   return (
-    <div className="markdown-edit">
+    <div className="markdown-edit scroll">
       <div className="section-title">
         <h3>Markdown</h3>
+        <button onClick={()=> changeContent("")} className="reset">
+          Clean
+        </button>
       </div>
       <textarea
         value={content}
