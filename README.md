@@ -26,7 +26,8 @@ npm install
 
 ### Run in development mode 🧪
 
-Execute the following command to run the app in the development mode.<br />
+Execute the following command to run the app in the development mode.
+<br />
 ```
 npm start
 ```
