@@ -7,7 +7,11 @@ This is a markdown editor ✍ designed by [Aromal Anil](https://github.com/aroma
 ## 🤷‍♂️ What can you write here
 
 1. Code
-	* eg: \`<div></div>\`
+  * eg: \`<div></div>\` or
+  *eg:
+      \`\`\`
+      npm install happiness
+      \`\`\`
 2. Blockquote
 	* eg: 
 	   > Blockquote
@@ -26,6 +30,7 @@ This is a markdown editor ✍ designed by [Aromal Anil](https://github.com/aroma
 * ⚛ React.js
 *  SCSS
 *  Javascript
+
 `;
 
 export default placeholder;
