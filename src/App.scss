@@ -1,0 +1,74 @@
+//Custom Fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+//Variable Decelerations
+$primary-color:#339989;
+$primary-accent:#7DE2D1;
+$primary-text:#131515;
+$text-accent:#2B2C28;
+$white:#FFFAFB;
+$source-code-font:'Open Sans', sans-serif;
+$open-sans-font:'Source Code Pro', monospace;
+
+// General Styling
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    color:$primary-text;
+    font-family: $source-code-font;
+}
+
+.navbar{
+    background-color: $primary-color;
+    color:$white;
+    padding: 1rem 5vw;
+}
+
+.work-area{
+    width: 100vw;
+    height: calc(100vh - 60px);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.wrapper-card{
+    width: 95%;
+    height: 90%;
+    display: flex;
+    box-shadow: 0 4px 12px rgba(0,0,0,.24);
+}
+.markdown-edit,.markdown-preview{
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    flex: 2rem 1fr;
+}
+
+.section-title{
+    text-transform: uppercase;
+}
+
+.markdown-edit{
+    width: 100%;
+    textarea{
+        font-family: $source-code-font;
+        width: 100%;
+        resize: none;
+        height: 100%;
+    }
+}
+
+.markdown-preview{
+    width: 100%;
+    .html-div{
+        overflow-y: scroll;
+    }
+}
