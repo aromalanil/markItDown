@@ -8,6 +8,8 @@ $primary-accent: #7de2d1;
 $primary-text: #131515;
 $text-accent: #2b2c28;
 $white: #fffafb;
+$gray: #eeeeee;
+$dark-gray:#eeeeee;
 $source-code-font: "Source Code Pro", monospace;
 $open-sans-font: "Open Sans", sans-serif;
 
@@ -17,6 +19,7 @@ $open-sans-font: "Open Sans", sans-serif;
 }
 
 body {
+  background-color: $white;
   margin: 0;
   color: $primary-text;
   font-family: $open-sans-font;
@@ -26,21 +29,21 @@ body {
   width: 0%;
 }
 
-.btn{
-    cursor: pointer;
-    font-size: .9rem;
-    padding: .2rem 1rem;
-    border-radius: .2rem;
-    color: $white;
-    background-color: $primary-color;
-    border:none;
-    transition: filter 200ms ease;
+.btn {
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  font-weight: 600;
+  border-radius: 0.2rem;
+  color: $white;
+  background-color: $primary-color;
+  border: none;
+  transition: filter 200ms ease;
 
-    &:hover{
-        filter: brightness(.9);
-    }
+  &:hover {
+    filter: brightness(0.9);
+  }
 }
-
 
 .navbar {
   margin: 0;
@@ -48,6 +51,7 @@ body {
   color: $white;
   height: 60px;
   padding-left: 1.5rem;
+  padding-right: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -56,9 +60,18 @@ body {
     line-height: 30px;
     display: flex;
     align-items: center;
-    img{
-        height: 30px;
+    img {
+      height: 30px;
     }
+  }
+  .github{
+      cursor:pointer;
+      height: 30px;
+      filter: brightness(0.9);
+      transition:filter 100ms linear;
+      &:hover{
+        filter: brightness(1.0);
+      }
   }
 }
 
@@ -102,6 +115,7 @@ body {
   h3 {
     font-weight: 600;
     margin: 0;
+    opacity: 0.8;
   }
 }
 
@@ -139,7 +153,76 @@ body {
   background-color: #444857;
 }
 
+//HTML Styling for preview
+.html-div {
+    a{
+        color:$primary-color;
+        &:hover{
+            filter:brightness(1.2);
+        }
+    }
+    hr{
+        border:none;
+        height:3px;
+        background-color:$dark-gray;
+    }
+  code {
+    font-size: 0.8rem;
+    font-family: $source-code-font;
+    background-color: $gray;
+    padding: 0.2rem;
+  }
+  li {
+    margin: 1rem 0;
+  }
+  blockquote {
+    border-left: 5px solid $dark-gray;
+    padding-left: 1rem;
+  }
+  img {
+    margin: 1rem;
+  }
+  h1 {
+    margin: 1.8rem 0;
+    line-height: 1.33;
+  }
+  h2 {
+    margin: 1.8rem 0;
+    line-height: 1.33;
+  }
+  h3 {
+    margin: 1.8rem 0;
+    line-height: 1.33;
+  }
+  h4 {
+    margin: 1.8rem 0;
+    line-height: 1.33;
+  }
+  table {
+    border-collapse: collapse;
+    margin:1.5rem .5rem;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    text-align:center;
+    padding: 8px 20px;
+  }
+  
+  tr:nth-child(even){background-color: $gray}
+  
+  
+  th {
+    background-color: $primary-color;
+    color: white;
+  }
+}
+
 @media screen and (max-width: 600px) {
+    html{
+        font-size:12.5px;
+    }
   .wrapper-card {
     width: 100%;
     height: 100%;
@@ -147,7 +230,7 @@ body {
   }
   .markdown-edit,
   .markdown-preview {
-    padding:1rem 1.3rem;
+    padding: 1rem 1.3rem;
     width: 100% !important;
     display: flex;
     flex-direction: column;
