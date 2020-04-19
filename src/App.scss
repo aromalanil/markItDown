@@ -8,8 +8,8 @@ $primary-accent: #7de2d1;
 $primary-text: #131515;
 $text-accent: #2b2c28;
 $white: #fffafb;
-$source-code-font: "Open Sans", sans-serif;
-$open-sans-font: "Source Code Pro", monospace;
+$source-code-font: "Source Code Pro", monospace;
+$open-sans-font: "Open Sans", sans-serif;
 
 // General Styling
 * {
@@ -19,22 +19,46 @@ $open-sans-font: "Source Code Pro", monospace;
 body {
   margin: 0;
   color: $primary-text;
-  font-family: $source-code-font;
+  font-family: $open-sans-font;
 }
 
-//Custom Scrollbar
-/* width */
 ::-webkit-scrollbar {
   width: 0%;
 }
+
+.btn{
+    cursor: pointer;
+    font-size: .9rem;
+    padding: .2rem 1rem;
+    border-radius: .2rem;
+    color: $white;
+    background-color: $primary-color;
+    border:none;
+    transition: filter 200ms ease;
+
+    &:hover{
+        filter: brightness(.9);
+    }
+}
+
 
 .navbar {
   margin: 0;
   background-color: $primary-color;
   color: $white;
-  padding: 1rem 5vw;
+  height: 60px;
+  padding-left: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   .title {
     margin: 0;
+    line-height: 30px;
+    display: flex;
+    align-items: center;
+    img{
+        height: 30px;
+    }
   }
 }
 
@@ -48,14 +72,14 @@ body {
 }
 
 .wrapper-card {
-  width: 95%;
-  height: 90%;
+  width: 100%;
+  height: 100%;
   display: flex;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.24);
 }
 .markdown-edit,
 .markdown-preview {
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -68,10 +92,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding:0 1rem;
+  font-size: 0.8rem;
+  padding: 0 1rem;
   height: 2.5rem;
   width: 100%;
-  background-color: green;
+  background-color: $primary-accent;
+  color: $text-accent;
   text-transform: uppercase;
   h3 {
     font-weight: 600;
@@ -82,6 +108,7 @@ body {
 .markdown-edit {
   width: 100%;
   textarea {
+    border: none;
     background-color: $white;
     font-size: 1rem;
     font-weight: 400;
@@ -90,6 +117,9 @@ body {
     width: 100%;
     resize: none;
     height: 100%;
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -117,8 +147,8 @@ body {
   }
   .markdown-edit,
   .markdown-preview {
+    padding:1rem 1.3rem;
     width: 100% !important;
-    padding: 1rem;
     display: flex;
     flex-direction: column;
     position: relative;

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import showdown from "showdown";
+import * as marked from 'marked'
 
 function MarkdownPreview({ content }) {
   const [html, setHtml] = useState(getHtml(content));
@@ -23,8 +23,7 @@ function MarkdownPreview({ content }) {
 }
 
 const getHtml = (markdown) => {
-  let converter = new showdown.Converter();
-  return converter.makeHtml(markdown);
+  return marked(markdown);
 };
 
 export default MarkdownPreview;

@@ -6,15 +6,21 @@ function MarkdownEdit({ content, changeContent }) {
     changeContent(event.target.value);
   };
 
+  const handleClearButton=()=>{
+    changeContent("");
+    document.getElementById("editor").focus();
+  }
+
   return (
     <div className="markdown-edit scroll">
       <div className="section-title">
         <h3>Markdown</h3>
-        <button onClick={()=> changeContent("")} className="reset">
-          Clean
+        <button onClick={handleClearButton} className="btn">
+          Clear
         </button>
       </div>
       <textarea
+        className="editable"
         value={content}
         onChange={handleEditorChange}
         id="editor"
