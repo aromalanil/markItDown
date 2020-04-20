@@ -6,18 +6,25 @@ function MarkdownEdit({ content, changeContent }) {
     changeContent(event.target.value);
   };
 
-  const handleClearButton=()=>{
+  const handleClearButton = () => {
     changeContent("");
     document.getElementById("editor").focus();
+  };
+
+  const handleCopyButton=()=>{
+   copyToClipBoard("editor");
   }
 
   return (
     <div className="markdown-edit scroll">
       <div className="section-title">
         <h3>Markdown</h3>
-        <button onClick={handleClearButton} className="btn">
-          Clear
-        </button>
+        <div className="right-section">
+          <button onClick={handleCopyButton} className="btn">Copy</button>
+          <button onClick={handleClearButton} className="btn">
+            Clear
+          </button>
+        </div>
       </div>
       <textarea
         className="editable"
@@ -27,6 +34,16 @@ function MarkdownEdit({ content, changeContent }) {
       ></textarea>
     </div>
   );
+}
+
+const copyToClipBoard=(id)=>{
+  document.getElementById(id).select();
+  document.execCommand("copy");
+  if (window.getSelection) {
+    window.getSelection().removeAllRanges();
+  } else if (document.selection) { 
+    document.selection.empty();
+  }
 }
 
 export default MarkdownEdit;

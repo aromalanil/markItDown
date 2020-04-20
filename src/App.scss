@@ -39,8 +39,12 @@ body {
   background-color: $primary-color;
   border: none;
   transition: filter 200ms ease;
-
+  margin:0 .5rem;
   &:hover {
+    filter: brightness(1.1);
+  }
+  &:focus{
+    outline: none;
     filter: brightness(0.9);
   }
 }
@@ -56,6 +60,7 @@ body {
   align-items: center;
   justify-content: space-between;
   .title {
+    user-select: none;
     margin: 0;
     line-height: 30px;
     display: flex;
@@ -112,11 +117,15 @@ body {
   background-color: $primary-accent;
   color: $text-accent;
   text-transform: uppercase;
+  user-select: none;
   h3 {
     font-weight: 600;
     margin: 0;
     opacity: 0.8;
   }
+  right-section{
+    height: 100%;
+  };
 }
 
 .markdown-edit {
