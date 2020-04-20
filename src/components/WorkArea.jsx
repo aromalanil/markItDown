@@ -21,7 +21,7 @@ function WorkArea() {
       <Split
         className="wrapper-card"
         sizes={[50, 50]}
-        minSize={orientation === "horizontal" ? 270 : 100}
+        minSize={orientation === "horizontal" ? 300 : 100}
         expandToMin={true}
         gutterAlign="center"
         direction={orientation}

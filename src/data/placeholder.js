@@ -29,10 +29,10 @@ This is a markdown editor ✍ designed by [Aromal Anil](https://github.com/aroma
 
 5. Images
   
-![React](https://img-a.udemycdn.com/course/750x422/1411694_0862.jpg)
+    ![React](https://d2eip9sf3oo6c2.cloudfront.net/series/square_covers/000/000/412/square_256/AccessibleReact_1000.png)
 
 
-## Technologies Used
+## 🛸 Technologies Used
 
 *  React.js
 *  SCSS
