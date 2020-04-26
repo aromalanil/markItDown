@@ -1,9 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import { Alert, AlertTitle } from "@material-ui/lab";
+import placeholder from "../data/placeholder";
 
 function MarkdownEdit({ content, changeContent }) {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if(content===''){
+      localStorage.setItem("markdown",placeholder);
+    }
+    else{
+      localStorage.setItem("markdown",content);
+    }
+  }, [content])
 
   const handleEditorChange = (event) => {
     event.preventDefault();

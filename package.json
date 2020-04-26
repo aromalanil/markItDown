@@ -1,6 +1,6 @@
 {
   "name": "markdown-editor",
-  "version": "1.3.1",
+  "version": "1.4.0",
   "description": "A react app to preview and edit Markdown",
   "private": true,
   "author": {
