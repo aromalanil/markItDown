@@ -72,10 +72,9 @@ body {
   .github{
       cursor:pointer;
       height: 30px;
-      filter: brightness(0.9);
       transition:filter 100ms linear;
       &:hover{
-        filter: brightness(1.0);
+        filter: brightness(0.9);
       }
   }
 }
