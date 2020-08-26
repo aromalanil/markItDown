@@ -5,11 +5,11 @@
 //Variable Decelerations
 $primary-color: #339989;
 $primary-accent: #7de2d1;
-$primary-text: #131515;
+$primary-text: #24292e;
 $text-accent: #2b2c28;
 $white: #fffafb;
-$gray: #eeeeee;
-$dark-gray:#eeeeee;
+$gray: #eaecef;
+$dark-gray: #e1e4e8;
 $source-code-font: "Source Code Pro", monospace;
 $open-sans-font: "Open Sans", sans-serif;
 
@@ -39,11 +39,11 @@ body {
   background-color: $primary-color;
   border: none;
   transition: filter 200ms ease;
-  margin:0 .5rem;
+  margin: 0 0.5rem;
   &:hover {
     filter: brightness(1.1);
   }
-  &:focus{
+  &:focus {
     outline: none;
     filter: brightness(0.9);
   }
@@ -69,13 +69,13 @@ body {
       height: 30px;
     }
   }
-  .github{
-      cursor:pointer;
-      height: 30px;
-      transition:filter 100ms linear;
-      &:hover{
-        filter: brightness(0.9);
-      }
+  .github {
+    cursor: pointer;
+    height: 30px;
+    transition: filter 100ms linear;
+    &:hover {
+      filter: brightness(0.9);
+    }
   }
 }
 
@@ -122,12 +122,12 @@ body {
     margin: 0;
     opacity: 0.8;
   }
-  right-section{
+  right-section {
     height: 100%;
-  };
-  a{
+  }
+  a {
     text-transform: none;
-    text-decoration:none;
+    text-decoration: none;
   }
 }
 
@@ -167,25 +167,37 @@ body {
 
 //HTML Styling for preview
 .html-div {
-    a{
-        color:$primary-color;
-        &:hover{
-            filter:brightness(1.2);
-        }
+  p {
+    margin: 0 0 1rem;
+  }
+  a {
+    color: $primary-color;
+    &:hover {
+      filter: brightness(1.2);
     }
-    hr{
-        border:none;
-        height:3px;
-        background-color:$dark-gray;
-    }
+  }
+  hr {
+    border: none;
+    height: 3px;
+    margin: 24px 0;
+    background-color: $dark-gray;
+  }
+  pre{
+    background-color: $gray;
+    padding:1rem;
+    width: 100%;
+    overflow: auto;
+    margin-top:0;
+    margin-bottom:1rem;
+  }
   code {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     font-family: $source-code-font;
     background-color: $gray;
     padding: 0.2rem;
   }
-  li {
-    margin: 1rem 0;
+  li + li {
+    margin-top: 0.25em;
   }
   blockquote {
     border-left: 5px solid $dark-gray;
@@ -193,39 +205,44 @@ body {
   }
   img {
     max-width: 100%;
-    margin: 1rem;
   }
   h1 {
-    margin: 1.8rem 0;
+    margin: 1.5rem 0 1rem;
     line-height: 1.33;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
   }
   h2 {
-    margin: 1.8rem 0;
+    margin: 1.5rem 0 1rem;
     line-height: 1.33;
+    padding-bottom: 0.3em;
+    border-bottom: 1px solid #eaecef;
   }
   h3 {
-    margin: 1.8rem 0;
+    margin: 1.5rem 0 1rem;
     line-height: 1.33;
   }
   h4 {
-    margin: 1.8rem 0;
+    margin: 1.5rem 0 1rem;
     line-height: 1.33;
   }
   table {
     border-collapse: collapse;
-    margin:1.5rem .5rem;
+    margin: 1.5rem 0.5rem;
   }
-  
-  th, td {
+
+  th,
+  td {
     border: 1px solid #ddd;
     text-align: left;
-    text-align:center;
+    text-align: center;
     padding: 8px 20px;
   }
-  
-  tr:nth-child(even){background-color: $gray}
-  
-  
+
+  tr:nth-child(even) {
+    background-color: $gray;
+  }
+
   th {
     background-color: $primary-color;
     color: white;
@@ -233,9 +250,9 @@ body {
 }
 
 @media screen and (max-width: 600px) {
-    html{
-        font-size:12.5px;
-    }
+  html {
+    font-size: 12.5px;
+  }
   .wrapper-card {
     width: 100%;
     height: 100%;
