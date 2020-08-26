@@ -16,6 +16,7 @@
 
 * Live Preview
 * Copy to clipboard
+* Save as HTML
 * Works offline (PWA)
 * One-tap clear button
 * Adjustable window size
