@@ -125,6 +125,10 @@ body {
   right-section{
     height: 100%;
   };
+  a{
+    text-transform: none;
+    text-decoration:none;
+  }
 }
 
 .markdown-edit {
