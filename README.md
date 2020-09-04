@@ -1,6 +1,6 @@
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/aromalanil/Markdown-Editor/master/public/demo.webp" />
+<img src="https://raw.githubusercontent.com/aromalanil/Markdown-Editor/master/art/demo.webp" />
 <h1>✍🏻 Markdown Editor</h1>
 <p>React Webapp to edit and preview markdown<p/><br/>
 <a href="https://github.com/aromalanil/Markdown-Editor/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
