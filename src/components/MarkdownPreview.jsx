@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from "react";
 import * as marked from "marked";
+import Prism from 'prismjs';
+import '../styles/github.css';
 
 function MarkdownPreview({ content }) {
   const [html, setHtml] = useState(getHtml(content));
+
+  useEffect(()=>{
+    Prism.highlightAll();
+  })
 
   useEffect(() => {
     setHtml(getHtml(content));

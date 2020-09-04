@@ -7,7 +7,7 @@ $primary-color: #339989;
 $primary-accent: #7de2d1;
 $primary-text: #24292e;
 $text-accent: #2b2c28;
-$white: #fffafb;
+$white: #fff;
 $gray: #eaecef;
 $dark-gray: #e1e4e8;
 $source-code-font: "Source Code Pro", monospace;
@@ -169,9 +169,11 @@ body {
 .html-div {
   p {
     margin: 0 0 1rem;
+    line-height: 1.5;
   }
   a {
     color: $primary-color;
+    text-decoration: none;
     &:hover {
       filter: brightness(1.2);
     }
@@ -182,21 +184,17 @@ body {
     margin: 24px 0;
     background-color: $dark-gray;
   }
-  pre{
-    background-color: $gray;
-    padding:1rem;
+  pre {
+    padding: 1rem;
     width: 100%;
     overflow: auto;
-    margin-top:0;
-    margin-bottom:1rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
   }
   code {
-    font-size: 0.7rem;
-    line-height: 1.2rem;
     font-family: $source-code-font;
-    background-color: $gray;
-    padding: 0.2rem;
   }
+
   li + li {
     margin-top: 0.25em;
   }
