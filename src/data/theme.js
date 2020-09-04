@@ -3,18 +3,49 @@ const themeData = [
         name: "Default",
         primaryColor: "#339989",
         accentColor: "#7de2d1",
-        textColor: "#2b2c28",
+        textColor: "#424242",
     },
     {
         name: "Dessert",
         primaryColor: "#46211a",
         accentColor: "#693d3d",
-        textColor: "#eee"
+        textColor: "#e0e0e0"
     }, {
-        name: "Poppy",
-        primaryColor: "#ff420e",
-        accentColor: "#f98866",
-        textColor: "#972201"
+        name: "Red",
+        primaryColor: "#f44336",
+        accentColor: "#ef9a9a",
+        textColor: "#8d0404"
+    }, {
+        name: "Indigo",
+        primaryColor: "#3f51b5",
+        accentColor: "#7986cb",
+        textColor: "#212121"
+    }, {
+        name: "Pink",
+        primaryColor: "#e91e63",
+        accentColor: "#f48fb1",
+        textColor: "#770a44"
+    },{
+        name: "Purple",
+        primaryColor: "#9c27b0",
+        accentColor: "#ce93d8",
+        textColor: "#420866"
+    }
+    ,{
+        name: "Orange",
+        primaryColor: "#ff9800",
+        accentColor: "#ffcc80",
+        textColor: "#9e5104"
+    },{
+        name: "Github",
+        primaryColor: "#24292E",
+        accentColor: "#3F4448",
+        textColor: "#CFD0D1"
+    },{
+        name: "lightGreen",
+        primaryColor: "#4caf50",
+        accentColor: "#a5d6a7",
+        textColor: "#1b5e20"
     }
 ];
 
