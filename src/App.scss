@@ -3,10 +3,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
 //Variable Decelerations
-$primary-color: #339989;
-$primary-accent: #7de2d1;
+$primary-color: var(--primary-color);
+$primary-accent: var(--accent-color);
 $primary-text: #24292e;
-$text-accent: #2b2c28;
+$text-accent: var(--text-color); 
+$test:#ff420e;
 $white: #fff;
 $gray: #eaecef;
 $dark-gray: #e1e4e8;
@@ -19,6 +20,9 @@ $open-sans-font: "Open Sans", sans-serif;
 }
 
 body {
+  --primary-color: #339989;
+  --accent-color: #7de2d1;
+  --text-color:#2b2c28;
   background-color: $white;
   margin: 0;
   color: $primary-text;
@@ -69,12 +73,77 @@ body {
       height: 30px;
     }
   }
-  .github {
-    cursor: pointer;
-    height: 30px;
-    transition: filter 100ms linear;
-    &:hover {
-      filter: brightness(0.9);
+  .nav-right {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    .theme-toggle {
+      position: relative;
+      .theme-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin:0 1rem;
+        img {
+          position: static;
+          cursor: pointer;
+          width: 1.9rem;
+          transition: filter 100ms linear;
+          &:hover {
+            filter: brightness(0.9);
+          }
+        }
+      }
+      .toggle-btn {
+        cursor: pointer;
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: 3px solid white;
+        background-color: $primary-color;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        img{
+          width: 50%;
+        }
+        &:hover {
+        filter: brightness(1.1);
+      }
+      }
+      .all-theme-wrapper {
+        position: absolute;
+        right: 2rem;
+        top: 2.2rem;
+        width: 250px;
+        height: 300px;
+        background-color: $primary-accent;
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        border-top-right-radius: 0;
+        z-index: 999;
+        -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
+        -moz-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
+        box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
+        h3 {
+          margin: 0.5rem 0 1rem;
+          margin-bottom: 1.2rem;
+        }
+      }
+      .theme-options {
+        display: flex;
+        gap: 0.5rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+    }
+    .github {
+      cursor: pointer;
+      height: 1.9rem;
+      transition: filter 100ms linear;
+      &:hover {
+        filter: brightness(0.9);
+      }
     }
   }
 }
