@@ -1,6 +1,6 @@
 {
   "name": "markdown-editor",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "A react app to preview and edit Markdown",
   "private": true,
   "author": {
@@ -14,6 +14,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
+    "babel-plugin-prismjs": "^2.0.1",
     "marked": "^0.8.2",
     "node-sass": "^4.13.1",
     "prismjs": "^1.21.0",
