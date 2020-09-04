@@ -9,7 +9,7 @@ const themeData = [
         name: "Dessert",
         primaryColor: "#46211a",
         accentColor: "#693d3d",
-        textColor: "#ccc"
+        textColor: "#eee"
     }, {
         name: "Poppy",
         primaryColor: "#ff420e",
