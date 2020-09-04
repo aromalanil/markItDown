@@ -57,7 +57,7 @@ body {
   margin: 0;
   background-color: $primary-color;
   color: $white;
-  height: 60px;
+  height: 3.75rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: flex;
@@ -70,7 +70,7 @@ body {
     display: flex;
     align-items: center;
     img {
-      height: 30px;
+      height: 1.87rem;
     }
   }
   .nav-right {
@@ -99,7 +99,7 @@ body {
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        border: 3px solid white;
+        border: 0.18rem solid white;
         background-color: $primary-color;
         display: flex;
         align-items:center;
@@ -113,24 +113,25 @@ body {
       }
       .all-theme-wrapper {
         position: absolute;
-        right: 2rem;
+        right: -2.5rem;
         top: 2.2rem;
-        width: 250px;
-        height: 300px;
-        background-color: $primary-accent;
+        width: 15.625rem;
+        height: 18.75rem;
+        background-color: $primary-color;
+        border: .1rem solid $primary-accent;
         padding: 1rem 1.5rem;
-        border-radius: 10px;
-        border-top-right-radius: 0;
+        border-radius: 0.6rem;
         z-index: 999;
         -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
         -moz-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
         box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
         h3 {
           margin: 0.5rem 0 1rem;
-          margin-bottom: 1.2rem;
+          padding-bottom: 1rem;
+          border-bottom: 0.1rem solid $primary-accent;
         }
       }
-      .theme-options {
+      .theme-btn {
         display: flex;
         gap: 0.5rem;
         align-items: center;
@@ -150,7 +151,7 @@ body {
 
 .work-area {
   width: 100vw;
-  height: calc(100vh - 60px);
+  height: calc(100vh - 3.75rem);
   margin: auto;
   display: flex;
   align-items: center;
@@ -242,15 +243,14 @@ body {
   }
   a {
     color: $primary-color;
-    text-decoration: none;
     &:hover {
       filter: brightness(1.2);
     }
   }
   hr {
     border: none;
-    height: 3px;
-    margin: 24px 0;
+    height: 0.187rem;
+    margin: 1.5rem 0;
     background-color: $dark-gray;
   }
   pre {
@@ -268,7 +268,7 @@ body {
     margin-top: 0.25em;
   }
   blockquote {
-    border-left: 5px solid $dark-gray;
+    border-left: .312em solid $dark-gray;
     padding-left: 1rem;
   }
   img {
@@ -301,10 +301,10 @@ body {
 
   th,
   td {
-    border: 1px solid #ddd;
+    border: 0.08rem solid #ddd;
     text-align: left;
     text-align: center;
-    padding: 8px 20px;
+    padding: .5rem 1.25rem;
   }
 
   tr:nth-child(even) {
@@ -319,7 +319,7 @@ body {
 
 @media screen and (max-width: 600px) {
   html {
-    font-size: 12.5px;
+    font-size: 14px;
   }
   .wrapper-card {
     width: 100%;
