@@ -2,8 +2,7 @@ import React, { useEffect, useRef } from "react";
 import themeData from "../data/theme";
 import tickIcon from "../icons/tick.svg";
 import DarkModeToggle from "./DarkModeToggle";
-
-require("prismjs/themes/prism-okaidia.css");
+import DarkCodeToggle from "./DarkCodeToggle";
 
 function ThemeSelector({ isVisible, setVisible, activeTheme, setActiveTheme }) {
 
@@ -52,6 +51,7 @@ function ThemeSelector({ isVisible, setVisible, activeTheme, setActiveTheme }) {
       <h3>Change Theme</h3>
       <div className="theme-btn">{themeButtons}</div>
       <DarkModeToggle />
+      <DarkCodeToggle />
     </div>
   );
 }

@@ -16,11 +16,11 @@ body {
   --body-accent-color: #e1e4e8;
   --alternate-table-color: #eaecef;
   --primary-text-color: #24292e;
-  --link-color:var(--primary-color);
+  --link-color: var(--primary-color);
   --table-border-color: #ddd;
   --source-code-font: "Source Code Pro", monospace;
   --open-sans-font: "Open Sans", sans-serif;
-  --color-transition : .5s ease;
+  --color-transition: 0.5s ease;
   background-color: var(--body-color);
   transition: background-color var(--color-transition);
   margin: 0;
@@ -28,12 +28,12 @@ body {
   font-family: var(--open-sans-font);
 }
 
-.dark{
-  --body-color:#1A1A1D;
-  --body-accent-color:#202124;
-  --primary-text-color:#c0c0c0;
+.dark {
+  --body-color: #1a1a1d;
+  --body-accent-color: #202124;
+  --primary-text-color: #c0c0c0;
   --table-border-color: #3b3b3b;
-  --alternate-table-color: #2B2C2F;
+  --alternate-table-color: #2b2c2f;
 }
 
 ::-webkit-scrollbar {
@@ -48,7 +48,7 @@ body {
   border-radius: 0.2rem;
   color: var(--nav-item-color);
   background-color: var(--primary-color);
-  transition: color,background-color var(--color-transition);
+  transition: color, background-color var(--color-transition);
   border: none;
   transition: filter 200ms ease;
   margin: 0 0.5rem;
@@ -72,7 +72,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  *{
+  * {
     user-select: none;
   }
   .title {
@@ -126,11 +126,10 @@ body {
         right: -2.5rem;
         top: 2.2rem;
         width: 15.625rem;
-        height: 18.75rem;
         background-color: var(--primary-color);
-        transition: background-color,border var(--color-transition);
+        transition: background-color, border var(--color-transition);
         border: 0.1rem solid var(--accent-color);
-        padding: 1rem 1.5rem;
+        padding: 1rem 1.5rem 1.5rem;
         border-radius: 0.6rem;
         z-index: 999;
         -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
@@ -141,7 +140,7 @@ body {
           padding-bottom: 1rem;
           border-bottom: 0.1rem solid var(--accent-color);
         }
-        h4{
+        h4 {
           margin-bottom: 0em;
         }
       }
@@ -271,11 +270,26 @@ body {
     transition: background-color var(--color-transition);
   }
   pre {
+    transition: background-color var(--color-transition);
+    line-height: 1.45;
+    padding: 0.8em;
+    overflow: auto;
+    border-radius: 6px;
+    font-size: 0.9em;
     padding: 1rem;
     width: 100%;
     overflow: auto;
     margin-top: 0;
     margin-bottom: 1rem;
+    *{
+      transition: color var(--color-transition);
+    }
+  }
+  :not(pre) > code {
+    font-size: 85%;
+    border-radius: 0.3em;
+    padding: 0.2em 0.4em;
+    margin: 0;
   }
   code {
     font-family: var(--source-code-font);
@@ -338,8 +352,8 @@ body {
     transition: background-color var(--color-transition);
     color: white;
   }
-  summary:focus{
-    outline:none;
+  summary:focus {
+    outline: none;
   }
 }
 
