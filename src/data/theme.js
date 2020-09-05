@@ -9,7 +9,8 @@ const themeData = [
         name: "Dessert",
         primaryColor: "#46211a",
         accentColor: "#693d3d",
-        textColor: "#e0e0e0"
+        textColor: "#eaecef",
+        linkColor:"#693d3d"
     }, {
         name: "Red",
         primaryColor: "#f44336",
@@ -40,7 +41,8 @@ const themeData = [
         name: "Github",
         primaryColor: "#24292E",
         accentColor: "#3F4448",
-        textColor: "#CFD0D1"
+        textColor: "#CFD0D1",
+        linkColor:"#eaecef"
     },{
         name: "lightGreen",
         primaryColor: "#4caf50",

@@ -16,10 +16,13 @@ body {
   --body-accent-color: #e1e4e8;
   --alternate-table-color: #eaecef;
   --primary-text-color: #24292e;
+  --link-color:var(--primary-color);
   --table-border-color: #ddd;
   --source-code-font: "Source Code Pro", monospace;
   --open-sans-font: "Open Sans", sans-serif;
+  --color-transition : .5s ease;
   background-color: var(--body-color);
+  transition: background-color var(--color-transition);
   margin: 0;
   color: var(--primary-text-color);
   font-family: var(--open-sans-font);
@@ -45,6 +48,7 @@ body {
   border-radius: 0.2rem;
   color: var(--nav-item-color);
   background-color: var(--primary-color);
+  transition: color,background-color var(--color-transition);
   border: none;
   transition: filter 200ms ease;
   margin: 0 0.5rem;
@@ -60,6 +64,7 @@ body {
 .navbar {
   margin: 0;
   background-color: var(--primary-color);
+  transition: background-color var(--color-transition);
   color: var(--nav-item-color);
   height: 3.75rem;
   padding-left: 1.5rem;
@@ -67,8 +72,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .title {
+  *{
     user-select: none;
+  }
+  .title {
     margin: 0;
     line-height: 30px;
     display: flex;
@@ -103,8 +110,7 @@ body {
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        border: 0.18rem solid white;
-        background-color: var(--primary-color);
+        border: 0.15rem solid white;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -122,6 +128,7 @@ body {
         width: 15.625rem;
         height: 18.75rem;
         background-color: var(--primary-color);
+        transition: background-color,border var(--color-transition);
         border: 0.1rem solid var(--accent-color);
         padding: 1rem 1.5rem;
         border-radius: 0.6rem;
@@ -133,6 +140,9 @@ body {
           margin: 0.5rem 0 1rem;
           padding-bottom: 1rem;
           border-bottom: 0.1rem solid var(--accent-color);
+        }
+        h4{
+          margin-bottom: 0em;
         }
       }
       .theme-btn {
@@ -188,9 +198,9 @@ body {
   height: 2.5rem;
   width: 100%;
   background-color: var(--accent-color);
+  transition: background-color var(--color-transition);
   color: var(--nav-section-text-color);
   text-transform: uppercase;
-  user-select: none;
   h3 {
     font-weight: 600;
     margin: 0;
@@ -210,6 +220,7 @@ body {
     color: var(--primary-text-color);
     border: none;
     background-color: var(--body-color);
+    transition: background-color var(--color-transition);
     font-size: 1rem;
     font-weight: 400;
     margin-top: 2rem;
@@ -227,6 +238,7 @@ body {
   width: 100%;
   .html-div {
     background-color: var(--body-color);
+    transition: background-color var(--color-transition);
     margin-top: 2rem;
     overflow-y: scroll;
   }
@@ -246,7 +258,7 @@ body {
     line-height: 1.5;
   }
   a {
-    color: var(--primary-color);
+    color: var(--link-color);
     &:hover {
       filter: brightness(1.2);
     }
@@ -256,6 +268,7 @@ body {
     height: 0.187rem;
     margin: 1.5rem 0;
     background-color: var(--body-accent-color);
+    transition: background-color var(--color-transition);
   }
   pre {
     padding: 1rem;
@@ -273,6 +286,7 @@ body {
   }
   blockquote {
     border-left: 0.312em solid var(--body-accent-color);
+    transition: border-color var(--color-transition);
     padding-left: 1rem;
   }
   img {
@@ -283,12 +297,14 @@ body {
     line-height: 1.33;
     padding-bottom: 0.3em;
     border-bottom: 1px solid var(--body-accent-color);
+    transition: border-color var(--color-transition);
   }
   h2 {
     margin: 1.5rem 0 1rem;
     line-height: 1.33;
     padding-bottom: 0.3em;
     border-bottom: 1px solid var(--body-accent-color);
+    transition: border-color var(--color-transition);
   }
   h3 {
     margin: 1.5rem 0 1rem;
@@ -306,6 +322,7 @@ body {
   th,
   td {
     border: 0.08rem solid var(--table-border-color);
+    transition: border-color var(--color-transition);
     text-align: left;
     text-align: center;
     padding: 0.5rem 1.25rem;
@@ -313,10 +330,12 @@ body {
 
   tr:nth-child(even) {
     background-color: var(--alternate-table-color);
+    transition: background-color var(--color-transition);
   }
 
   th {
     background-color: var(--primary-color);
+    transition: background-color var(--color-transition);
     color: white;
   }
   summary:focus{

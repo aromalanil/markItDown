@@ -1,12 +1,15 @@
 import React, { useEffect, useRef } from "react";
 import themeData from "../data/theme";
 import tickIcon from "../icons/tick.svg";
+import DarkModeToggle from "./DarkModeToggle";
+
+require("prismjs/themes/prism-okaidia.css");
 
 function ThemeSelector({ isVisible, setVisible, activeTheme, setActiveTheme }) {
+
   const themeSelectorRef = useRef(null);
 
   const handleThemeButtonClick = (theme) => {
-    setVisible(false);
     setActiveTheme(theme);
   };
 
@@ -14,6 +17,7 @@ function ThemeSelector({ isVisible, setVisible, activeTheme, setActiveTheme }) {
     const hideDropDown = (e) => {
       if (
         themeSelectorRef.current &&
+        !themeSelectorRef.current.parentElement.contains(e.target) &&
         !themeSelectorRef.current.contains(e.target)
       ) {
         setVisible(false);
@@ -23,7 +27,7 @@ function ThemeSelector({ isVisible, setVisible, activeTheme, setActiveTheme }) {
     return () => {
       document.removeEventListener("click", hideDropDown);
     };
-  }, [themeSelectorRef, setVisible]);
+  }, [themeSelectorRef]);
 
   const themeButtons = themeData.map((theme) => {
     return (
@@ -39,13 +43,16 @@ function ThemeSelector({ isVisible, setVisible, activeTheme, setActiveTheme }) {
     );
   });
 
-  return isVisible ? (
-    <div className="all-theme-wrapper" ref={themeSelectorRef}>
+  return (
+    
+    <div
+      className="all-theme-wrapper"
+      ref={themeSelectorRef}
+      style={{ display: isVisible ? "block" : "none" }}>
       <h3>Change Theme</h3>
       <div className="theme-btn">{themeButtons}</div>
+      <DarkModeToggle />
     </div>
-  ) : (
-    <></>
   );
 }
 
