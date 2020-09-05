@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import * as marked from "marked";
 import Prism from 'prismjs';
-import '../styles/github.css';
 import '../utils/prism-imports';
+//css for Prism is imported in ThemeSelector
 
 function MarkdownPreview({ content }) {
   const [html, setHtml] = useState(getHtml(content));

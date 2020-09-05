@@ -21,14 +21,12 @@ function ThemeToggle() {
       <div className="theme-icon" onClick={handleToggleClick}>
         <img src={themeIcon} alt="Theme Icon" />
       </div>
-      {dropDownVisible && (
         <ThemeSelector
           isVisible={dropDownVisible}
           setVisible={setDropDownVisible}
           activeTheme={activeTheme}
           setActiveTheme={setActiveTheme}
         />
-      )}
     </div>
   );
 }
@@ -36,9 +34,8 @@ function ThemeToggle() {
 const changeTheme = (theme) => {
   document.body.style.setProperty("--primary-color", theme.primaryColor);
   document.body.style.setProperty("--accent-color", theme.accentColor);
-  if (theme.textColor) {
-    document.body.style.setProperty("--text-color", theme.textColor);
-  }
+  document.body.style.setProperty("--link-color", theme.linkColor ? theme.linkColor : theme.primaryColor);
+  theme.textColor && document.body.style.setProperty("--nav-section-text-color", theme.textColor);
 };
 
 export default ThemeToggle;

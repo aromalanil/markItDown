@@ -9,11 +9,6 @@ pre {
   word-spacing: normal;
   word-break: normal;
   word-wrap: normal;
-  line-height: 1.45;
-  padding: 0.8em;
-  overflow: auto;
-  font-size: 0.9em;
-  border-radius: 6px;
   background:  #f6f8fa;
 
   -moz-tab-size: 8;
@@ -29,12 +24,8 @@ pre {
 /* Inline code */
 :not(pre) > code {
   color: inherit;
-  font-size: 85%;
-  border-radius: 0.3em;
   white-space: normal;
   background: #f5f5f5;
-  padding: 0.2em 0.4em;
-  margin: 0;
   background-color: rgba(27, 31, 35, 0.05);
 }
 

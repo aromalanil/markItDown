@@ -2,18 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-//Variable Decelerations
-$primary-color: var(--primary-color);
-$primary-accent: var(--accent-color);
-$primary-text: #24292e;
-$text-accent: var(--text-color); 
-$test:#8d0404;
-$white: #fff;
-$gray: #eaecef;
-$dark-gray: #e1e4e8;
-$source-code-font: "Source Code Pro", monospace;
-$open-sans-font: "Open Sans", sans-serif;
-
 // General Styling
 * {
   box-sizing: border-box;
@@ -22,11 +10,30 @@ $open-sans-font: "Open Sans", sans-serif;
 body {
   --primary-color: #339989;
   --accent-color: #7de2d1;
-  --text-color:#2b2c28;
-  background-color: $white;
+  --nav-section-text-color: #2b2c28;
+  --body-color: #fff;
+  --nav-item-color: #fff;
+  --body-accent-color: #e1e4e8;
+  --alternate-table-color: #eaecef;
+  --primary-text-color: #24292e;
+  --link-color: var(--primary-color);
+  --table-border-color: #ddd;
+  --source-code-font: "Source Code Pro", monospace;
+  --open-sans-font: "Open Sans", sans-serif;
+  --color-transition: 0.5s ease;
+  background-color: var(--body-color);
+  transition: background-color var(--color-transition);
   margin: 0;
-  color: $primary-text;
-  font-family: $open-sans-font;
+  color: var(--primary-text-color);
+  font-family: var(--open-sans-font);
+}
+
+.dark {
+  --body-color: #1a1a1d;
+  --body-accent-color: #202124;
+  --primary-text-color: #c0c0c0;
+  --table-border-color: #3b3b3b;
+  --alternate-table-color: #2b2c2f;
 }
 
 ::-webkit-scrollbar {
@@ -39,8 +46,9 @@ body {
   padding: 0.4rem 1rem;
   font-weight: 600;
   border-radius: 0.2rem;
-  color: $white;
-  background-color: $primary-color;
+  color: var(--nav-item-color);
+  background-color: var(--primary-color);
+  transition: color, background-color var(--color-transition);
   border: none;
   transition: filter 200ms ease;
   margin: 0 0.5rem;
@@ -55,16 +63,19 @@ body {
 
 .navbar {
   margin: 0;
-  background-color: $primary-color;
-  color: $white;
+  background-color: var(--primary-color);
+  transition: background-color var(--color-transition);
+  color: var(--nav-item-color);
   height: 3.75rem;
   padding-left: 1.5rem;
   padding-right: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  .title {
+  * {
     user-select: none;
+  }
+  .title {
     margin: 0;
     line-height: 30px;
     display: flex;
@@ -83,7 +94,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin:0 1rem;
+        margin: 0 1rem;
         img {
           position: static;
           cursor: pointer;
@@ -99,27 +110,26 @@ body {
         width: 2rem;
         height: 2rem;
         border-radius: 50%;
-        border: 0.18rem solid white;
-        background-color: $primary-color;
+        border: 0.15rem solid white;
         display: flex;
-        align-items:center;
+        align-items: center;
         justify-content: center;
-        img{
+        img {
           width: 50%;
         }
         &:hover {
-        filter: brightness(1.1);
-      }
+          filter: brightness(1.1);
+        }
       }
       .all-theme-wrapper {
         position: absolute;
         right: -2.5rem;
         top: 2.2rem;
         width: 15.625rem;
-        height: 18.75rem;
-        background-color: $primary-color;
-        border: .1rem solid $primary-accent;
-        padding: 1rem 1.5rem;
+        background-color: var(--primary-color);
+        transition: background-color, border var(--color-transition);
+        border: 0.1rem solid var(--accent-color);
+        padding: 1rem 1.5rem 1.5rem;
         border-radius: 0.6rem;
         z-index: 999;
         -webkit-box-shadow: 0px 0px 14px 5px rgba(0, 0, 0, 0.17);
@@ -128,7 +138,10 @@ body {
         h3 {
           margin: 0.5rem 0 1rem;
           padding-bottom: 1rem;
-          border-bottom: 0.1rem solid $primary-accent;
+          border-bottom: 0.1rem solid var(--accent-color);
+        }
+        h4 {
+          margin-bottom: 0em;
         }
       }
       .theme-btn {
@@ -183,10 +196,10 @@ body {
   padding: 0 1rem;
   height: 2.5rem;
   width: 100%;
-  background-color: $primary-accent;
-  color: $text-accent;
+  background-color: var(--accent-color);
+  transition: background-color var(--color-transition);
+  color: var(--nav-section-text-color);
   text-transform: uppercase;
-  user-select: none;
   h3 {
     font-weight: 600;
     margin: 0;
@@ -203,12 +216,14 @@ body {
 .markdown-edit {
   width: 100%;
   textarea {
+    color: var(--primary-text-color);
     border: none;
-    background-color: $white;
+    background-color: var(--body-color);
+    transition: background-color var(--color-transition);
     font-size: 1rem;
     font-weight: 400;
     margin-top: 2rem;
-    font-family: $source-code-font;
+    font-family: var(--source-code-font);
     width: 100%;
     resize: none;
     height: 100%;
@@ -221,7 +236,8 @@ body {
 .markdown-preview {
   width: 100%;
   .html-div {
-    background-color: $white;
+    background-color: var(--body-color);
+    transition: background-color var(--color-transition);
     margin-top: 2rem;
     overflow-y: scroll;
   }
@@ -241,7 +257,7 @@ body {
     line-height: 1.5;
   }
   a {
-    color: $primary-color;
+    color: var(--link-color);
     &:hover {
       filter: brightness(1.2);
     }
@@ -250,24 +266,41 @@ body {
     border: none;
     height: 0.187rem;
     margin: 1.5rem 0;
-    background-color: $dark-gray;
+    background-color: var(--body-accent-color);
+    transition: background-color var(--color-transition);
   }
   pre {
+    transition: background-color var(--color-transition);
+    line-height: 1.45;
+    padding: 0.8em;
+    overflow: auto;
+    border-radius: 6px;
+    font-size: 0.9em;
     padding: 1rem;
     width: 100%;
     overflow: auto;
     margin-top: 0;
     margin-bottom: 1rem;
+    *{
+      transition: color var(--color-transition);
+    }
+  }
+  :not(pre) > code {
+    font-size: 85%;
+    border-radius: 0.3em;
+    padding: 0.2em 0.4em;
+    margin: 0;
   }
   code {
-    font-family: $source-code-font;
+    font-family: var(--source-code-font);
   }
 
   li + li {
     margin-top: 0.25em;
   }
   blockquote {
-    border-left: .312em solid $dark-gray;
+    border-left: 0.312em solid var(--body-accent-color);
+    transition: border-color var(--color-transition);
     padding-left: 1rem;
   }
   img {
@@ -277,13 +310,15 @@ body {
     margin: 1.5rem 0 1rem;
     line-height: 1.33;
     padding-bottom: 0.3em;
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid var(--body-accent-color);
+    transition: border-color var(--color-transition);
   }
   h2 {
     margin: 1.5rem 0 1rem;
     line-height: 1.33;
     padding-bottom: 0.3em;
-    border-bottom: 1px solid #eaecef;
+    border-bottom: 1px solid var(--body-accent-color);
+    transition: border-color var(--color-transition);
   }
   h3 {
     margin: 1.5rem 0 1rem;
@@ -300,19 +335,25 @@ body {
 
   th,
   td {
-    border: 0.08rem solid #ddd;
+    border: 0.08rem solid var(--table-border-color);
+    transition: border-color var(--color-transition);
     text-align: left;
     text-align: center;
-    padding: .5rem 1.25rem;
+    padding: 0.5rem 1.25rem;
   }
 
   tr:nth-child(even) {
-    background-color: $gray;
+    background-color: var(--alternate-table-color);
+    transition: background-color var(--color-transition);
   }
 
   th {
-    background-color: $primary-color;
+    background-color: var(--primary-color);
+    transition: background-color var(--color-transition);
     color: white;
+  }
+  summary:focus {
+    outline: none;
   }
 }
 
