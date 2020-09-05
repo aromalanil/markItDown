@@ -17,6 +17,7 @@
 * Live Preview
 * Copy to clipboard
 * Save as HTML
+* Multiple theme support
 * Works offline (PWA)
 * One-tap clear button
 * Adjustable window size

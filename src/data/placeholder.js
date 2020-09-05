@@ -1,7 +1,7 @@
 //This is the default placeholder Markup for the App
 
 const placeholder=`# Hello 👋
----
+
 This is a markdown editor ✍ designed by [Aromal Anil](https://github.com/aromalanil)
 
 ## 🤷‍♂️ What can you write here
@@ -9,7 +9,7 @@ This is a markdown editor ✍ designed by [Aromal Anil](https://github.com/aroma
 1. Code
   * eg: \`<div></div>\` or
   *eg:
-       \`\`\`
+       \`\`\`bash
   npm install happiness
       \`\`\`
 2. Blockquote
