@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import placeholder from "../data/placeholder";
 
 function MarkdownEdit({ content, changeContent }) {
   const [open, setOpen] = useState(false);
+  const editorRef =useRef(null);
 
   useEffect(() => {
     if(content===''){
@@ -22,7 +23,7 @@ function MarkdownEdit({ content, changeContent }) {
 
   const handleClearButton = () => {
     changeContent("");
-    document.getElementById("editor").focus();
+    editorRef.current.focus();
   };
 
   const handleCopyButton = () => {
@@ -52,6 +53,7 @@ function MarkdownEdit({ content, changeContent }) {
         value={content}
         onChange={handleEditorChange}
         id="editor"
+        ref={editorRef}
       ></textarea>
 
       <Snackbar open={open} autoHideDuration={2000} onClose={handleClose}>
