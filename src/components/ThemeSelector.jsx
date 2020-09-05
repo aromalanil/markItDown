@@ -26,7 +26,7 @@ function ThemeSelector({ isVisible, setVisible, activeTheme, setActiveTheme }) {
     return () => {
       document.removeEventListener("click", hideDropDown);
     };
-  }, [themeSelectorRef]);
+  }, [isVisible,setVisible]);
 
   const themeButtons = themeData.map((theme) => {
     return (
