@@ -7,7 +7,6 @@
 code[class*="language-"],
 pre[class*="language-"] {
   color: #f8f8f2;
-  background: none;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em;
@@ -25,6 +24,11 @@ pre[class*="language-"] {
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+}
+
+pre{
+    color: #f8f8f2;
+    background: #272822;
 }
 
 /* Code blocks */
