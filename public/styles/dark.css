@@ -4,12 +4,11 @@
  * @author ocodia
  */
 
-code[class*="language-"],
-pre[class*="language-"] {
+pre {
   color: #f8f8f2;
+  background: #272822;
   text-shadow: 0 1px rgba(0, 0, 0, 0.3);
   font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
-  font-size: 1em;
   text-align: left;
   white-space: pre;
   word-spacing: normal;
@@ -26,18 +25,6 @@ pre[class*="language-"] {
   hyphens: none;
 }
 
-pre{
-    color: #f8f8f2;
-    background: #272822;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-  padding: 1em;
-  margin: 0.5em 0;
-  overflow: auto;
-  border-radius: 0.3em;
-}
 
 /* Inline code */
 :not(pre) > code {
@@ -51,12 +38,6 @@ pre[class*="language-"] {
   background: #272822;
 }
 
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-  padding: 0.1em;
-  border-radius: 0.3em;
-  white-space: normal;
-}
 
 .token.comment,
 .token.prolog,

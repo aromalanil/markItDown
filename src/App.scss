@@ -281,9 +281,6 @@ body {
     overflow: auto;
     margin-top: 0;
     margin-bottom: 1rem;
-    * {
-      transition: color var(--color-transition);
-    }
   }
   :not(pre) > code {
     font-size: 85%;
