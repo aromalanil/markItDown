@@ -11,22 +11,12 @@ const themeData = [
         accentColor: "#693d3d",
         textColor: "#eaecef",
         linkColor:"#693d3d"
-    }, {
-        name: "Red",
-        primaryColor: "#f44336",
-        accentColor: "#ef9a9a",
-        textColor: "#8d0404"
-    }, {
+    },  {
         name: "Indigo",
         primaryColor: "#3f51b5",
         accentColor: "#7986cb",
         textColor: "#212121"
     }, {
-        name: "Pink",
-        primaryColor: "#e91e63",
-        accentColor: "#f48fb1",
-        textColor: "#770a44"
-    },{
         name: "Purple",
         primaryColor: "#9c27b0",
         accentColor: "#ce93d8",
