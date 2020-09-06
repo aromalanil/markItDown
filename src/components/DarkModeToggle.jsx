@@ -1,17 +1,27 @@
 import React, { useEffect } from "react";
 import Switch from "@material-ui/core/Switch";
 import useLocalStorage from "../hooks/useLocalStorage";
+import DarkCodeToggle from "./DarkCodeToggle";
 
 function DarkModeToggle() {
-  const [darkMode, setDarkMode] = useLocalStorage("darkMode", false);
+  const [isDarkMode, setDarkMode] = useLocalStorage("isDarkMode", false);
+  const [isCodeDark, setCodeDark] = useLocalStorage("codeDarkMode", false);
 
   useEffect(() => {
-    if (darkMode) {
+    if (isDarkMode) {
       document.body.classList.add("dark");
+      setCodeDark(true);
     } else {
       document.body.classList.remove("dark");
+      setCodeDark(false);
     }
-  }, [darkMode]);
+    // eslint-disable-next-line
+  }, [isDarkMode]);
+
+  useEffect(() => {
+    const styleSheet = `/styles/${isCodeDark ? "dark" : "light"}.css`;
+    document.getElementById("code-stylesheet").setAttribute("href", styleSheet);
+  }, [isCodeDark]);
 
   const handleSwitchToggle = (e) => {
     setDarkMode(e.target.checked);
@@ -20,7 +30,8 @@ function DarkModeToggle() {
   return (
     <>
       <h4>Dark Mode</h4>
-      <Switch checked={darkMode} onChange={handleSwitchToggle} />
+      <Switch checked={isDarkMode} onChange={handleSwitchToggle} />
+      <DarkCodeToggle isDarkMode={isCodeDark} setDarkMode={setCodeDark} />
     </>
   );
 }
