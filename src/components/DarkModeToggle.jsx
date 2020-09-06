@@ -10,12 +10,9 @@ function DarkModeToggle() {
   useEffect(() => {
     if (isDarkMode) {
       document.body.classList.add("dark");
-      setCodeDark(true);
     } else {
       document.body.classList.remove("dark");
-      setCodeDark(false);
     }
-    // eslint-disable-next-line
   }, [isDarkMode]);
 
   useEffect(() => {
@@ -24,7 +21,9 @@ function DarkModeToggle() {
   }, [isCodeDark]);
 
   const handleSwitchToggle = (e) => {
-    setDarkMode(e.target.checked);
+    const newMode = e.target.checked;
+    setDarkMode(newMode);
+    newMode ? setCodeDark(true) : setCodeDark(false);
   };
 
   return (

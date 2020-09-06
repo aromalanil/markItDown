@@ -281,7 +281,7 @@ body {
     overflow: auto;
     margin-top: 0;
     margin-bottom: 1rem;
-    *{
+    * {
       transition: color var(--color-transition);
     }
   }
@@ -290,6 +290,8 @@ body {
     border-radius: 0.3em;
     padding: 0.2em 0.4em;
     margin: 0;
+    transition: color var(--color-transition);
+    transition: background-color var(--color-transition);
   }
   code {
     font-family: var(--source-code-font);
