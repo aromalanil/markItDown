@@ -34,7 +34,7 @@ function MarkdownPreview({ content }) {
       <div className="section-title">
         <h3>Preview</h3>
         <div className="right-section">
-        <Tooltip title="FullScreen" title="Download HTML">
+        <Tooltip title="Download HTML">
           <button className="btn" onClick={handleSaveClick}>
             <SaveIcon />
           </button>
