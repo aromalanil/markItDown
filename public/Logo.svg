@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="398" height="398" viewBox="0 0 398 398">
+  <g id="Logo" transform="translate(-705 -350)">
+    <g id="Background">
+      <g id="Path_1" data-name="Path 1" transform="translate(705 350)" fill="#2d2e35" stroke-linecap="round" stroke-linejoin="bevel">
+        <path d="M 390.5 390.5 L 7.5 390.5 L 7.5 7.5 L 390.5 7.5 L 390.5 390.5 Z" stroke="none"/>
+        <path d="M 15 15 L 15 383 L 383 383 L 383 15 L 15 15 M 0 0 L 398 0 L 398 398 L 0 398 L 0 0 Z" stroke="none" fill="#fff"/>
+      </g>
+    </g>
+    <g id="Text">
+      <text id="Md" transform="translate(799 602)" fill="#fff" font-size="150" font-family="ProductSans-Regular, Product Sans"><tspan x="0" y="0">Md</tspan></text>
+      <text id="_01" data-name="01" transform="translate(736 427)" fill="#fff" font-size="50" font-family="ProductSans-Regular, Product Sans"><tspan x="0" y="0">01</tspan></text>
+      <text id="markItDown" transform="translate(825 669)" fill="#fff" font-size="30" font-family="ProductSans-Regular, Product Sans"><tspan x="0" y="0">markItDown</tspan></text>
+    </g>
+  </g>
+</svg>

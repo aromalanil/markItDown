@@ -1,20 +1,20 @@
 import React from "react";
-import MarkDownLogo from "../icons/markdown.svg";
+import MarkDownLogo from "./Logo";
 import GitHub from "../icons/github.svg";
-import ThemeToggle from './ThemeToggle';
+import ThemeToggle from "./ThemeToggle";
 
 function NavBar() {
   return (
     <nav className="navbar">
       <h3 className="title">
-        <img src={MarkDownLogo} alt="" />
-        &nbsp;Markdown Editor
+        <MarkDownLogo />
+        &nbsp;markItDown
       </h3>
       <div className="nav-right">
-        <ThemeToggle/>
+        <ThemeToggle />
         <img
           onClick={() =>
-            window.open("https://github.com/aromalanil/Markdown-Editor")
+            window.open("https://github.com/aromalanil/markItDown")
           }
           className="github"
           src={GitHub}

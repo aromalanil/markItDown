@@ -2,7 +2,7 @@
 
 const placeholder=`# Hello 👋
 
-This is a markdown editor ✍ designed by [Aromal Anil](https://github.com/aromalanil)
+markItDown is a markdown editor ✍ designed by [Aromal Anil](https://github.com/aromalanil)
 
 ## 🤷‍♂️ What can you write here
 

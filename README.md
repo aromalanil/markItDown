@@ -1,13 +1,13 @@
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/aromalanil/Markdown-Editor/master/art/demo.webp" />
-<h1>✍🏻 Markdown Editor</h1>
+<img src="https://raw.githubusercontent.com/aromalanil/markItDown/master/art/demo.webp" />
+<h1>✍🏻 markItDown</h1>
 <p>React Webapp to edit and preview markdown<p/><br/>
-<a href="https://github.com/aromalanil/Markdown-Editor/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/Markdown-Editor/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/Markdown-Editor/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/Markdown-Editor"><img alt="GitHub stars" src="https://img.shields.io/github/repo-size/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/Markdown-Editor/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/aromalanil/Markdown-Editor?style=for-the-badge"></a><br/>
+<a href="https://github.com/aromalanil/markItDown/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown"><img alt="GitHub stars" src="https://img.shields.io/github/repo-size/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/aromalanil/Markdown-Editor?style=for-the-badge"></a><br/>
 <a href="https://app.netlify.com/sites/editmarkdown/deploys"><img alt="Netlify Build" src="https://api.netlify.com/api/v1/badges/281d5586-42a8-4ddf-8daf-50279fcd9148/deploy-status"></a>
 </div>
 
@@ -32,6 +32,8 @@
 - npm
 - Git (optional)
 
+<br/>
+
 ### Common setup ⚒ 
 
 Clone the repo and install the dependencies.
@@ -39,7 +41,7 @@ Clone the repo and install the dependencies.
 <br/>
 
 ```bash
-git clone https://github.com/aromalanil/Markdown-Editor.git
+git clone https://github.com/aromalanil/markItDown.git
 cd Markdown-Editor
 ```
 
@@ -53,22 +55,23 @@ npm install
 
 Execute the following command to run the app in the development mode.
 
-<br/>
 
 ```
 npm start
 ```
-<br/>
+
 
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits. You will also see any lint errors in the console.
+
+<br/>
 
 ### Generate a Build 📦
 
 ```
 npm run build
 ```
-<br/>
+
 Builds the app for production to the `build` folder.<br />
 
 It correctly bundles React in production mode and optimizes the build for the best performance.
