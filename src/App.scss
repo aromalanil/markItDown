@@ -214,6 +214,9 @@ body {
     text-transform: none;
     text-decoration: none;
   }
+  *{
+    user-select: none;
+  }
 }
 
 .markdown-edit {
@@ -252,7 +255,7 @@ body {
 .fullscreen {
   max-height: 100%;
   margin-top: 2rem;
-  padding-bottom: 1rem;
+  overflow-y: scroll;
 }
 
 .gutter {
@@ -384,13 +387,6 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-  }
-  .fullscreen {
-    margin-top: 0;
-    padding-bottom: 0;
-  }
-  #preview {
-    padding-top: 2rem;
   }
   .gutter {
     height: 10px !important;
