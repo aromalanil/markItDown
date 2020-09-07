@@ -2,6 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 import Snackbar from "@material-ui/core/Snackbar";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import placeholder from "../data/placeholder";
+import { MdContentCopy as CopyIcon } from "react-icons/md";
+import { MdDelete as CleanIcon } from "react-icons/md";
+import { Tooltip } from "@material-ui/core";
 
 function MarkdownEdit({ content, changeContent }) {
   const [open, setOpen] = useState(false);
@@ -39,12 +42,16 @@ function MarkdownEdit({ content, changeContent }) {
       <div className="section-title">
         <h3>Markdown</h3>
         <div className="right-section">
-          <button onClick={handleCopyButton} className="btn">
-          Copy
-          </button>
-          <button onClick={handleClearButton} className="btn">
-            Clear
-          </button>
+          <Tooltip title="Copy to Clipboard">
+            <button onClick={handleCopyButton} className="btn">
+              <CopyIcon />
+            </button>
+          </Tooltip>
+          <Tooltip title="Clean">
+            <button onClick={handleClearButton} className="btn">
+              <CleanIcon />
+            </button>
+          </Tooltip>
         </div>
       </div>
       <textarea
