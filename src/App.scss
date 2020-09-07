@@ -46,6 +46,8 @@ body {
   padding: 0.4rem 1rem;
   font-weight: 600;
   border-radius: 0.2rem;
+  display: inline-block;
+  line-height: 1.2rem;
   color: var(--nav-item-color);
   background-color: var(--primary-color);
   transition: color, background-color var(--color-transition);
@@ -238,9 +240,18 @@ body {
   .html-div {
     background-color: var(--body-color);
     transition: background-color var(--color-transition);
-    margin-top: 2rem;
     overflow-y: scroll;
+    max-height: 100%;
   }
+  .preview-fullscreen {
+    padding: 1rem;
+    margin-top: 0;
+  }
+}
+.fullscreen {
+  max-height: 100%;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .gutter {
@@ -372,6 +383,13 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+  .fullscreen {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  #preview {
+    padding-top: 2rem;
   }
   .gutter {
     height: 10px !important;
