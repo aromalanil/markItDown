@@ -1,6 +1,6 @@
 {
   "name": "markdown-editor",
-  "version": "1.8.1",
+  "version": "1.9.1",
   "description": "A react app to preview and edit Markdown",
   "private": true,
   "author": {
@@ -20,6 +20,8 @@
     "prismjs": "^1.21.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-full-screen": "^0.3.1",
+    "react-icons": "^3.11.0",
     "react-scripts": "3.4.1",
     "react-split": "^2.0.7"
   },

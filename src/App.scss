@@ -40,18 +40,21 @@ body {
   width: 0%;
 }
 
-.btn {
+.btn{
+  display:flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
-  font-size: 0.9rem;
-  padding: 0.4rem 1rem;
-  font-weight: 600;
-  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  border-radius: 0.3rem;
+  display: inline-block;
   color: var(--nav-item-color);
   background-color: var(--primary-color);
   transition: color, background-color var(--color-transition);
   border: none;
   transition: filter 200ms ease;
   margin: 0 0.5rem;
+  padding:0.4rem .4rem .15rem;
   &:hover {
     filter: brightness(1.1);
   }
@@ -238,9 +241,18 @@ body {
   .html-div {
     background-color: var(--body-color);
     transition: background-color var(--color-transition);
-    margin-top: 2rem;
     overflow-y: scroll;
+    max-height: 100%;
   }
+  .preview-fullscreen {
+    padding: 1rem;
+    margin-top: 0;
+  }
+}
+.fullscreen {
+  max-height: 100%;
+  margin-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .gutter {
@@ -372,6 +384,13 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
+  }
+  .fullscreen {
+    margin-top: 0;
+    padding-bottom: 0;
+  }
+  #preview {
+    padding-top: 2rem;
   }
   .gutter {
     height: 10px !important;
