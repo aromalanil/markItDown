@@ -14,7 +14,7 @@ function Logo() {
             transform="translate(375 489)"
             fill="#2d2e35"
             stroke="#fff"
-            stroke-width="30">
+            strokeWidth="30">
             <rect width="419" height="419" stroke="none" />
             <rect x="15" y="15" width="389" height="389" fill="none" />
           </g>
@@ -24,8 +24,8 @@ function Logo() {
             id="Md"
             transform="translate(458 786)"
             fill="#fff"
-            font-size="180"
-            font-family="ProductSans-Regular, Product Sans">
+            fontSize="180"
+            fontFamily="ProductSans-Regular, Product Sans">
             <tspan x="0" y="0">
               Md
             </tspan>
@@ -35,8 +35,8 @@ function Logo() {
             data-name="01"
             transform="translate(436 598)"
             fill="#fff"
-            font-size="60"
-            font-family="ProductSans-Regular, Product Sans">
+            fontSize="60"
+            fontFamily="ProductSans-Regular, Product Sans">
             <tspan x="0" y="0">
               01
             </tspan>
