@@ -9,17 +9,21 @@ markItDown is a markdown editor ✍ designed by [Aromal Anil](https://github.com
 1. Code
   * eg: \`<div></div>\` or
   *eg:
-       \`\`\`bash
+
+  \`\`\`bash
   npm install happiness
-      \`\`\`
+  \`\`\`
+
 2. Blockquote
 	* eg: 
 > Blockquote
+
 3. Different Text Style
   * **Bold**
   * *Italic*
-   * ~~Strikethrough~~
-4.Tables
+  * ~~Strikethrough~~
+  
+4. Tables
 
     | Name          | Age           | Salary|
     | ------------- |:-------------:| -----:|
