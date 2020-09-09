@@ -1,13 +1,13 @@
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/aromalanil/markItDown/master/art/demo.webp" />
+<img src="https://raw.githubusercontent.com/aromalanil/markItDown/master/art/github_preview.webp" />
 <h1>✍🏻 markItDown</h1>
 <p>React Webapp to edit and preview markdown<p/><br/>
-<a href="https://github.com/aromalanil/markItDown/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/markItDown/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/markItDown/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/markItDown"><img alt="GitHub stars" src="https://img.shields.io/github/repo-size/aromalanil/Markdown-Editor?style=for-the-badge"></a>&nbsp;&nbsp;
-<a href="https://github.com/aromalanil/markItDown/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/aromalanil/Markdown-Editor?style=for-the-badge"></a><br/>
+<a href="https://github.com/aromalanil/markItDown/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/aromalanil/markItDown?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown/blob/master/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/aromalanil/markItDown?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/aromalanil/markItDown?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown"><img alt="GitHub stars" src="https://img.shields.io/github/repo-size/aromalanil/markItDown?style=for-the-badge"></a>&nbsp;&nbsp;
+<a href="https://github.com/aromalanil/markItDown/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/aromalanil/markItDown?style=for-the-badge"></a><br/>
 <a href="https://app.netlify.com/sites/markitdown/deploys"><img alt="Netlify Build" src="https://api.netlify.com/api/v1/badges/281d5586-42a8-4ddf-8daf-50279fcd9148/deploy-status"></a>
 </div>
 
