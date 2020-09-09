@@ -22,8 +22,8 @@ function DarkModeToggle() {
 
   const handleSwitchToggle = (e) => {
     const newMode = e.target.checked;
-    setDarkMode(newMode);
     newMode ? setCodeDark(true) : setCodeDark(false);
+    setDarkMode(newMode);
   };
 
   return (
