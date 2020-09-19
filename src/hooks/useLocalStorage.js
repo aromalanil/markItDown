@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-const useLocalHost = (key, initialValue) => {
+const useLocalStorage = (key, initialValue) => {
     const [storedValue, setStoredValue] = useState(getItem(key, initialValue));
 
     const setValue = (value) => {
@@ -27,4 +27,4 @@ const getItem = (key, initialValue) => {
     }
 }
 
-export default useLocalHost;
+export default useLocalStorage;
