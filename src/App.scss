@@ -1,6 +1,6 @@
 //Custom Fonts
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 
 // General Styling
 * {
@@ -18,8 +18,8 @@ body {
   --primary-text-color: #24292e;
   --link-color: var(--primary-color);
   --table-border-color: #ddd;
-  --source-code-font: "Source Code Pro", monospace;
-  --open-sans-font: "Open Sans", sans-serif;
+  --source-code-font: 'Source Code Pro', monospace;
+  --open-sans-font: 'Open Sans', sans-serif;
   --color-transition: 0.3s ease-out;
   background-color: var(--body-color);
   transition: background-color var(--color-transition);
@@ -36,7 +36,7 @@ body {
   --alternate-table-color: #2b2c2f;
 }
 
-::-webkit-scrollbar {
+:not(pre)::-webkit-scrollbar {
   width: 0%;
 }
 
