@@ -6,6 +6,7 @@ import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { CgSoftwareDownload as SaveIcon } from "react-icons/cg";
 import { RiFullscreenFill as FullScreenIcon } from "react-icons/ri";
 import { Tooltip } from "@material-ui/core";
+import DOMPurify from 'dompurify';
 
 function MarkdownPreview({ content }) {
   const [html, setHtml] = useState(getHtml(content));
@@ -16,7 +17,8 @@ function MarkdownPreview({ content }) {
   });
 
   useEffect(() => {
-    setHtml(getHtml(content));
+    const sanitizedHtml = DOMPurify.sanitize(getHtml(content));
+    setHtml(sanitizedHtml);
   }, [content]);
 
   const handleFullScreen = () =>
