@@ -15,6 +15,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "babel-plugin-prismjs": "^2.0.1",
+    "dompurify": "^3.0.6",
     "marked": "^0.8.2",
     "node-sass": "^4.13.1",
     "prismjs": "^1.21.0",
